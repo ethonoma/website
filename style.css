@@ -14,8 +14,10 @@ h2{
   font-size: 2.5em;
 }
 a{
+  
   text-decoration: none;
   color: inherit;
+  padding:3em 3em;
 }
 p{
   font-size: 1.5em;
@@ -35,13 +37,11 @@ p{
 .subHeader {
   display: flex;
   flex-direction: row;
-  
 }
 
 .headElement {
-  display: flex;
-  padding:1em 2em;
-  align-items: center;
+  display:grid;
+  place-items:center;
   transition: 0.5s;
 }
 .headElement:hover {
@@ -53,6 +53,7 @@ p{
   display: flex;
   flex-direction:column;
   align-items: center;
+  align-content: center;
   
 }
 .block{
@@ -89,4 +90,83 @@ img.bg{
   display:block;
   visibility: hidden;
   padding:5em;
+}
+
+
+
+
+
+
+/*computers*/
+:root{
+  --black: #252025ff;
+  --champagne-pink: #ffe5d9ff;
+  --pink: #ffcad4ff;
+  --fluorescent-blue: #0ff1efff;
+  --paradise-pink: #ff0066ff;
+}
+.computer{
+  font-family:helvetica, sans-serif;
+  display:flex;
+  padding:1em;
+}
+.computer>div{
+  margin:1em;
+  display:grid;
+  place-items:center;
+}
+.monitor{
+  display:grid;
+  place-items:center;
+  background: var(--black);
+  height:300px;
+  width:400px;
+  border-radius:50px;
+}
+.screen{
+  display:grid;
+  place-items:center;
+  background:var(--champagne-pink);
+  height:250px;
+  width:300px;
+  color:black;
+}
+.screen>:nth-child(2){
+  text-align:center;
+  line-height:1.5em;
+  font-size:1.25em;
+  padding:0.5em;
+}
+.screen>:nth-child(1){
+  font-size:1.5em;
+  position:absolute;
+  display:grid;
+  place-items:center;
+  background:var(--fluorescent-blue);
+  height:250px;
+  width:300px;
+  transition: 0.5s;
+}
+.screen>:nth-child(1):hover{
+  opacity:0;
+}
+.screen>:nth-child(1)>div{
+  font-size:0.75em;
+  font-weight:500;
+  background:var(--paradise-pink);
+  padding:0.5em;
+  border-radius:1em;
+}
+.feet{
+  height:50px;
+  width:100px;
+  background:var(--black);
+}
+.feet>div{
+  position:relative;
+  top:30px;
+  left:-25px;
+  height:20px;
+  width:150px;
+  background:var(--black);
 }
