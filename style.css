@@ -1,0 +1,92 @@
+/* CSS files add styling rules to your content */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  background: black;
+}
+h1{
+  font-size: 5em;
+}
+h2{
+  font-size: 2.5em;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+p{
+  font-size: 1.5em;
+}
+.header {
+  position: -webkit-sticky;
+  position:sticky;
+  top: 0px;
+  color: white;
+  background: black;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.subHeader {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.headElement {
+  display: flex;
+  padding:1em 2em;
+  align-items: center;
+  transition: 0.5s;
+}
+.headElement:hover {
+  background: #333333;
+}
+
+.pageBody {
+  color: white;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  
+}
+.block{
+  align-text: center;
+  padding:1em 1em 20em 1em;
+  width:80vw;
+}
+
+img.bg{
+  position:absolute;
+  left:60%;
+  z-index:-10;
+}
+
+.profiles{
+  display:flex;
+  flex-flow: row wrap;
+}
+.profiles>div{
+  margin:2em;
+  width:20em;
+}
+.reveal{
+  background: #abc;
+  padding:1em;
+  transition: 0.5s;
+  opacity:0;
+}
+.reveal:hover{
+  opacity: 1;
+}
+:target::before{
+  content: "hi";
+  display:block;
+  visibility: hidden;
+  padding:5em;
+}
