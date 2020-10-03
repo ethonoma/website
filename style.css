@@ -1,15 +1,18 @@
-/* CSS files add styling rules to your content */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;900&family=Roboto:ital,wght@0,100;0,300;0,400;1,400&display=swap');/* CSS files add styling rules to your content */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: helvetica, arial, sans-serif;
+  font-family: Roboto, arial, sans-serif;
   background: black;
   width:100%:
 }
 h1{
   font-size: 5em;
+  font-family: Roboto Slab;
+  font-weight:400;
 }
 h2{
   font-size: 2.5em;
@@ -25,6 +28,7 @@ a{
 }
 p{
   font-size: 1.5em;
+  font-weight:300;
 }
 .header {
   position: -webkit-sticky;
@@ -123,7 +127,7 @@ img.bg{
 }
 .profiles>div{
   margin:2em;
-  width:20em;
+  max-width:20em;
 }
 .reveal{
   background: #abc;
@@ -275,6 +279,7 @@ img.bg{
 
   .profiles>div{
     margin:0px;
+    max-width:30em;
   }
 
   .computer>div:nth-child(1){
