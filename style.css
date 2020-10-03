@@ -6,6 +6,7 @@ html {
 body {
   font-family: helvetica, arial, sans-serif;
   background: black;
+  width:100%:
 }
 h1{
   font-size: 5em;
@@ -14,10 +15,13 @@ h2{
   font-size: 2.5em;
 }
 a{
-  
   text-decoration: none;
+  text-align:center;
+  vertical-align:middle;
+  line-height:2.3em;
   color: inherit;
-  padding:3em 3em;
+  width:100%;
+  height:100%;
 }
 p{
   font-size: 1.5em;
@@ -27,21 +31,27 @@ p{
   position:sticky;
   top: 0px;
   color: white;
-  background: black;
   z-index: 10;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  width:100%;
+}
+.header:nth-child {
+  flex-grow:1;
 }
 
 .subHeader {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  width:50%;
 }
 
 .headElement {
   display:grid;
   place-items:center;
+  flex-grow:1;
   transition: 0.5s;
 }
 .headElement:hover {
@@ -53,13 +63,51 @@ p{
   display: flex;
   flex-direction:column;
   align-items: center;
-  align-content: center;
-  
+  overflow:hidden;
 }
+
 .block{
-  align-text: center;
   padding:1em 1em 20em 1em;
   width:80vw;
+  display: grid;
+  place-items: center;
+}
+#Intro{
+  display:block;
+}
+
+#Different{
+  width:50%;
+}
+
+#Mission>h1{
+  margin-bottom: 200px;
+}
+
+#Footer>img{
+  max-width:990px;
+  width:100%;
+  text-align:center;
+}
+#Footer>div{
+  display:flex;
+  flex-direction:row;
+  padding:1em;
+}
+#Footer>div>a{
+  display:block;
+  height:3em;
+  width:3em;
+  background-size:contain;
+}
+#Footer>div>a:nth-child(1){
+  background-image: url("https://cdn.glitch.com/77493cfd-6d0f-41da-b199-5d9931e8310e%2F28e67396-245f-496b-aa4a-9eddf04c2b4e.image.png?v=1601756790892");
+}
+#Footer>div>a:nth-child(2){
+  background-image: url("https://cdn.glitch.com/77493cfd-6d0f-41da-b199-5d9931e8310e%2F70e56c1a-21bc-44a2-a0c7-78bf03bba0ce.image.png?v=1601756801928");
+}
+#Footer>div>a:nth-child(3){
+  background-image: url("https://cdn.glitch.com/77493cfd-6d0f-41da-b199-5d9931e8310e%2F01e09894-ae38-411a-8dbd-fcdcbeeb2356.image.png?v=1601756818361");
 }
 
 img.bg{
@@ -71,6 +119,7 @@ img.bg{
 .profiles{
   display:flex;
   flex-flow: row wrap;
+  text-align: center;
 }
 .profiles>div{
   margin:2em;
@@ -106,9 +155,9 @@ img.bg{
   --paradise-pink: #ff0066ff;
 }
 .computer{
+  position: absolute;
   font-family:helvetica, sans-serif;
   display:flex;
-  padding:1em;
 }
 .computer>div{
   margin:1em;
@@ -130,16 +179,12 @@ img.bg{
   height:250px;
   width:300px;
   color:black;
-}
-.screen>:nth-child(2){
-  text-align:center;
-  line-height:1.5em;
-  font-size:1.25em;
-  padding:0.5em;
+  position:relative;
 }
 .screen>:nth-child(1){
   font-size:1.5em;
-  position:absolute;
+  z-index:5;
+  top:0px;
   display:grid;
   place-items:center;
   background:var(--fluorescent-blue);
@@ -150,6 +195,15 @@ img.bg{
 .screen>:nth-child(1):hover{
   opacity:0;
 }
+.screen>:nth-child(2){
+  z-index:4;
+  position:absolute;
+  text-align:center;
+  line-height:1.5em;
+  font-size:1.25em;
+  padding:0.5em;
+}
+
 .screen>:nth-child(1)>div{
   font-size:0.75em;
   font-weight:500;
@@ -169,4 +223,83 @@ img.bg{
   height:20px;
   width:150px;
   background:var(--black);
+}
+
+@media (max-aspect-ratio: 11/16) {
+  body{
+  }
+
+  .pageBody{
+  }
+  
+  h1{
+    font-size:2.4em;
+  }
+
+  .headElement{
+    font-size:1em;
+  }
+
+  img.bg{
+    left:20%;
+  }
+
+  .header{
+    top:-8em;
+    flex-direction:column;
+    align-items:center;
+  }
+  .header>div{
+    width:100%;
+  }
+  
+  .computer{
+    transform:scale(0.8);  
+  }
+  #Intro{
+    margin-top:-11em;
+  }
+  
+  #Different{
+    width:80%;
+    padding-bottom:2em;
+    
+  }
+  
+  #About{
+    text-align:center;
+    padding-bottom:2em;
+  }
+
+  .profiles{
+    display:block;
+    font-size:0.8em;
+  }
+
+  .profiles>div{
+    margin:0px;
+  }
+
+  .computer>div:nth-child(1){
+    display:none;
+  }
+  .computer>div:nth-child(3){
+    display:none;
+  }
+  
+  #Team>h2{
+    text-align:center;
+    margin-right:-100%;
+    margin-left:-100%;
+  }
+  #Team{
+    padding-bottom: 2em;
+  }
+  #Footer{
+    padding:0px;
+    margin:0px;
+  }
+  #Footer>p{
+    text-align:center;
+  }
 }
